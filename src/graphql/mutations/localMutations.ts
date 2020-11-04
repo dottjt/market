@@ -1,6 +1,6 @@
 import { gql } from '@apollo/client';
 
-const UPDATE_WIZARD_STEPPER = gql`
+export const UPDATE_WIZARD_STEPPER_MUTATION = gql`
   mutation UpdateWizardStepper($number: Number) {
     updateWizardStepper(stepperValue: $number) {
       wizard {

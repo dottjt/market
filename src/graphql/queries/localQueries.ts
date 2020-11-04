@@ -1,9 +1,7 @@
 import { gql } from '@apollo/client';
 
-const INITIAL_HOME = gql`
+export const GET_INITIAL_HOME_QUERY = gql`
   query GetInitialHome {
-    wizard {
-      step
-    }
+
   }
 `;
