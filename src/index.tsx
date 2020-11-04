@@ -8,7 +8,7 @@ import {
 } from 'react-router-dom';
 
 import { ApolloProvider } from '@apollo/client';
-import { apolloClient } from './util/apolloClient';
+import { apolloClient } from './graphql/apolloClient';
 
 import './index.css';
 import reportWebVitals from './reportWebVitals';

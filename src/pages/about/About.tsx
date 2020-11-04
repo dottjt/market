@@ -1,12 +1,12 @@
 import React from 'react';
-// import './Home.css';
+import './About.css';
 
 import { Header } from '../../components/header/Header';
 import { Footer } from '../../components/footer/Footer';
 
-export function Home() {
+export function About() {
   return (
-    <div className="Home">
+    <div className="About">
       <Header/>
       <p>About Beauty Marketplace.</p>
       <Footer/>
