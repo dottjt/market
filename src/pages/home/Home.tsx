@@ -2,7 +2,7 @@ import React from 'react';
 import { useQuery } from '@apollo/client';
 import { Container } from '@material-ui/core';
 
-import './Home.scss';
+import CssBaseline from '@material-ui/core/CssBaseline';
 
 import { Loading } from '../loading/Loading';
 import { Error } from '../error/Error';
@@ -21,6 +21,7 @@ export function Home() {
 
   return (
     <Container className="Home">
+      <CssBaseline/>
       <Header/>
       <Wizard/>
       <Footer/>

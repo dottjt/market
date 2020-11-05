@@ -19,6 +19,7 @@ import { apolloClient } from './graphql/apolloClient';
 // COMPONENTS
 import { Home } from './pages/home/Home';
 import { About } from './pages/about/About';
+import { Error } from './pages/error/Error';
 
 // MISC
 import './index.css';
@@ -30,12 +31,9 @@ ReactDOM.render(
       <BrowserRouter>
         <ApolloProvider client={apolloClient}>
           <Switch>
-            <Route path="/about">
-              <About />
-            </Route>
-            <Route path="/">
-              <Home />
-            </Route>
+            <Route path="/about"><About/></Route>
+            <Route path="/"><Home/></Route>
+            <Route><Error/></Route>
           </Switch>
         </ApolloProvider>
       </BrowserRouter>
