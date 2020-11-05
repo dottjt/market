@@ -1,15 +1,16 @@
 import React from 'react';
-import './About.css';
+import { Container } from '@material-ui/core';
+import './About.scss';
 
 import { Header } from '../../components/header/Header';
 import { Footer } from '../../components/footer/Footer';
 
 export function About() {
   return (
-    <div className="About">
+    <Container className="About">
       <Header/>
-      <p>About Beauty Marketplace.</p>
+      <p>About Skincare Marketplace.</p>
       <Footer/>
-    </div>
+    </Container>
   );
 }

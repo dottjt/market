@@ -1,5 +1,7 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
+import { Container } from '@material-ui/core';
+
 import './Home.scss';
 
 import { Loading } from '../loading/Loading';
@@ -18,10 +20,10 @@ export function Home() {
   if (error) return <Error/>;
 
   return (
-    <div className="Home">
+    <Container className="Home">
       <Header/>
       <Wizard/>
       <Footer/>
-    </div>
+    </Container>
   );
 }

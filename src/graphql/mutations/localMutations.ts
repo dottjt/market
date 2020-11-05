@@ -3,7 +3,7 @@ import { gql } from '@apollo/client';
 export const UPDATE_WIZARD_STEPPER_MUTATION = gql`
   mutation UpdateWizardStepper($number: Number) {
     updateWizardStepper(stepperValue: $number) {
-      wizard {
+      wizard @client {
         stepper
       }
     }

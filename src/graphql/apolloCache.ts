@@ -1,24 +1,19 @@
-export const cache = new InMemoryCache({
-  typePolicies: {
-    Query: {
-      fields: {
-        cartItems: {
-          read() {
-            return cartItemsVar();
-          }
-        }
-      }
-    }
-  }
+import { InMemoryCache } from '@apollo/client';
 
-// const GET_PRODUCT_DETAILS = gql`
-//   query ProductDetails($productId: ID!) {
-//     product(id: $productId) {
-//       name
-//       price
-//       isInCart @client    }
+export const cache = new InMemoryCache();
+
+// export const cache = new InMemoryCache({
+//   typePolicies: {
+//     Wizard: {
+//       fields: {
+//         stepper: {
+//           read() {
+//             return stepperVar();
+//           }
+//         }
+//       }
+//     }
 //   }
-// `;
 
 
 // export const cartItemsVar = makeVar([]);

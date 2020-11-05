@@ -1,35 +1,45 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+// ROUTER
 import {
   BrowserRouter,
   Switch,
   Route
 } from 'react-router-dom';
 
+// THEME
+import { ThemeProvider } from '@material-ui/core';
+import { theme } from './util/theme';
+
+// GRAPHQL
 import { ApolloProvider } from '@apollo/client';
 import { apolloClient } from './graphql/apolloClient';
 
-import './index.css';
-import reportWebVitals from './reportWebVitals';
-
+// COMPONENTS
 import { Home } from './pages/home/Home';
 import { About } from './pages/about/About';
 
+// MISC
+import './index.css';
+import reportWebVitals from './reportWebVitals';
+
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <ApolloProvider client={apolloClient}>
-        <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
-      </ApolloProvider>
-    </BrowserRouter>
+    <ThemeProvider theme={theme}>
+      <BrowserRouter>
+        <ApolloProvider client={apolloClient}>
+          <Switch>
+            <Route path="/about">
+              <About />
+            </Route>
+            <Route path="/">
+              <Home />
+            </Route>
+          </Switch>
+        </ApolloProvider>
+      </BrowserRouter>
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
